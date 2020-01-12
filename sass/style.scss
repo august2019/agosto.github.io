@@ -1,0 +1,20 @@
+@import  "common/reset";
+@import  "common/mixin";
+@import  "common/function";
+@import  "common/common";
+@import  "common/layout";
+@import  "page/main";
+
+//모듈
+@import  "module/gnb";
+@import  "module/btn";
+@import  "module/popup";
+@import  "module/common-pop";
+
+
+.uni{
+   border:1px solid red;
+   .uniyou{
+      background:blue;
+   }
+}

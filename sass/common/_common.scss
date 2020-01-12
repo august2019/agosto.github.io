@@ -1,0 +1,40 @@
+@charset "UTF-8";
+//공통
+legend {@include txtHidden()}
+label {cursor:pointer}
+[class^="icon"] {
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.cYellow {color:$cYellow}
+.cBlue {color:$cBlue;}
+.cGray {color:$cGray}
+.cRed {color:$cRed}
+
+.bgYellow {background-color:$cYellow}
+.bgBlue {background-color:$cBlue}
+.bgGray {background-color:$cGray}
+.bgRed {background-color:$cRed}
+
+.cBrd {border-color:$cBrd}
+.cBrdBlue {border-color:$cBrdBlue}
+.cBrdRed {border-color:$cBrdRed}
+
+.cFontBlue {color:$cFontBlue}
+.cFont {color:$cFont}
+.cFontGray {color:$cFontGray}
+
+
+.clearFix {@include clearFix();}
+.icon {
+  position:relative;
+  overflow:hidden;
+  display:inline-block;*display:inline; zoom:1;
+  text-indent:-9999px; white-space:nowrap; line-height:0;
+  vertical-align:middle;
+}
+.txtHidden {@include txtHidden()}
+.txtHide {position:absolute;left:-100%;top:-100%;width:0;height:0;display:block;font-size:0;line-height:0;overflow:hidden;}
+
+input::-webkit-input-placeholder,.placeholder {color:#b3b3b3;@include font("dLight")}

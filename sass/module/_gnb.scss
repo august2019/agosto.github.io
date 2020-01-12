@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.gnb{
+   display:table;
+   table-layout:fixed;
+   width:100%;
+   border:1px solid #ccc;
+   &__item{
+      display:table-cell;
+      text-align:center;
+      // &+&{border-left:1px solid #ccc}
+      // &~&{border-left:1px solid #ccc}
+      border-right:1px solid #ccc;
+      &:not(:last-child){border-right:1px solid #ccc;}
+      &-active{
+         color:red;
+         border-bottom:2px solid red;
+      }
+   }
+}

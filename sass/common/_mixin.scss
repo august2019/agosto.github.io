@@ -1,0 +1,83 @@
+@mixin inline-block(){
+    display:inline-block;zoom:1;*display:inline;
+}
+
+@mixin txtHidden(){
+    overflow:hidden;
+    display:inline-block;
+    text-indent:-9999px; white-space:nowrap; line-height:0;
+}
+
+
+@mixin txtHide(){
+    position:absolute;width:0;height:0;display:block;font-size:0;line-height:0;overflow:hidden;
+}
+
+//...한줄처리
+@mixin ellipsis(){
+    overflow:hidden; white-space:nowrap !important;
+    text-overflow:ellipsis; -o-text-overflow:ellipsis; word-wrap:normal !important;
+}
+// 말주림 2줄
+@mixin ellipsis_multi($textLine:2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -webkit-line-clamp: $textLine;
+    -webkit-box-orient: vertical;
+    word-wrap:break-word;
+    line-height:1.2em;
+    max-height: (1.2em * $textLine);
+    text-align:left;
+    display:-webkit-box !important;
+}
+
+//clear처리
+@mixin clearFix(){
+    clear:both;
+    &:before,&:after {content:" "; display:table;}
+    &:after {clear:both;}
+}
+
+@mixin before-middle(){
+    &:before {
+        content:"";
+        display:inline-block;
+        height:100%;
+        vertical-align: middle;
+    }
+}
+
+
+
+@mixin font($weight:"regular"){
+    @if($weight == "thin") {
+        font-family:"notokr-thin";
+        //font-weight:100;
+    }
+    @if($weight == "light") {
+        font-family:"notokr-light"
+        //font-weight:300;
+    }
+    @if($weight == "dLight") {
+        font-family:"notokr-demilight"
+        //font-weight:300;
+    }
+    @if($weight == "regular") {
+        font-family:"notokr-regular"
+        //font-weight:400;
+    }
+    @if($weight == "medium") {
+        font-family:"notokr-medium"
+        //font-weight:500;
+    }
+    @if($weight == "bold") {
+        font-family:"notokr-bold"
+        //font-weight:700;
+    }
+    @if($weight == "black") {
+        font-family:"notokr-black"
+        //font-weight:900;
+    }
+    font-weight:normal;
+}

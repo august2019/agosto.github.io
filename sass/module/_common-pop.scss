@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.common-pop{
+   box-sizing: border-box;
+	display: inline-block;
+	padding: 10px 200px;
+	position: relative;
+   z-index: 1000;
+   	// 레이어팝업일때
+      &.isLayer {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100% !important;
+         height: 100% !important;
+         background: rgba(0,0,0,.3);
+         position: fixed;
+         top: 0;
+         left: 0;
+         overflow: auto;
+         -webkit-overflow-scrolling: touch;
+      }
+   &__body{
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 600px;
+      max-height: 100%;
+      text-align: left;
+      font-size: 12px;
+      white-space: normal;
+      background: #fff;
+      outline: none;
+      border: 1px solid #636363;
+      position: relative;
+      z-index: 1001;
+      .-isLayer & {//패어런트
+         box-shadow: 3px 3px 10px rgba(0,0,0,.1);
+      }
+   }
+   &__title{
+      flex-shrink:0;
+      height:35px;
+      background: #ccc;
+   }
+   &__content{
+      flex: 1;
+      padding: 20px;
+      overflow: auto;
+      overflow-x: hidden;
+   }
+}
+
+

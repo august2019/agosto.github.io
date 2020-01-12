@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.main {
+  height:100vh;
+  padding:0 rem(20);
+  &__iconArea {
+    font-size:rem(200);
+    height:calc(100vh - 30.3rem);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__section {
+    text-align:center;
+    font-size:rem(18);
+    color:#cff09e;
+  }
+  &__weatherTxt {
+    font-size:rem(30);
+  }
+  &__mapPoint {
+    opacity: 0.5;
+  }
+
+  &__tit {
+    font-size:rem(24);
+    @include font("dLight");
+    display:inline;
+    vertical-align: middle;
+  }
+  &__subTit {
+    font-size:rem(20);
+    @include font("dLight");
+    margin-top:rem(5);
+  }
+  &__point {
+    margin-top:rem(5);
+  }
+  &__comment {
+    margin-top:rem(15);
+  }
+  &__time {
+    font-size:rem(14);
+    opacity: 0.5;
+  }
+  &__more {
+    color:#cff09e;
+    border-color:#cff09e;
+    margin-top:rem(15);
+  }
+  &__moreInfo {
+    color:#cff09e;
+    border-color:#cff09e;
+    padding:rem(5);
+  }
+  &__header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    &:not(:first-of-type) {
+      margin-top:rem(10);
+    }
+  }
+}
+
+[class*="wi-"] {
+  font-family:weathericons;
+}
+
+
+.aa{
+  width:100px/2;
+  height:(800px/2);
+}
+
+.main__weatherTxt{
+  color:red;
+  .unipost{color:red;}
+}

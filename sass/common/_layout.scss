@@ -1,0 +1,24 @@
+.header{width:1000px;margin:0 auto;
+   &__tit{font-size:20px;font-weight:bold;text-align:left}
+   &__navList{
+      font-size:0;
+      text-align:center;
+   }
+   &__navLink{
+      display:inline-block;
+      width:33.333%;
+      font-size:16px;
+      border:1px solid #000;
+      &.-ative{
+         font-weight:bold;
+         border-bottom:2px solid red;
+         color:$cRed;
+      }
+   }
+   
+}
+
+
+
+
+
